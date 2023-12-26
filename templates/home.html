@@ -1,0 +1,141 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ahmad elektronik</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="name">
+            <h1>ahmad elektronik</h1>
+        </div>
+        <nav>
+            <ul id="menu-icon">
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <h1>
+                        temukan device terbaik dan aksesoris dengan harga terbaik !
+                    </h1>
+                    <p>
+                        dapatkan kualitas terbaik handphone,komputer,dan berbagai aksesoris<br>
+                        dapatkan Cash Backs! hingga 20%.
+                    </p>
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'images\tech.jpg' %}" alt="Iphone">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="{% static 'images/Featured 1.jpg' %}">
+                </div>
+                <div class="col-3">
+                    <img src="{% static 'images/Featured-2.jpg' %}">
+                </div>
+                <div class="col-3">
+                    <img src="{% static 'images/Featured-3.jpg' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="small-container">
+        <div class="line"></div>
+        <h2 class="title">
+
+            Produk unggulan
+        </h2>
+
+        <div class="row">
+            {% for produk in unggulan %}
+            <div class="col-4">
+                <a href="https://wa.me/08592246928?text=Halo%20saya,%20ingin%20Memesan%20{{produk.name}}!
+                "><img src="media/{{produk.image}}" alt="#">
+                <h4>
+                    {{produk.name}}
+                </h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>
+                    {{produk.price}}
+                </p>
+            </div>
+            {% endfor %}
+            
+        </div>
+        <div class="line"></div>
+        <h2 class="title">
+            Produk Terbaru
+        </h2>
+        <div class="row">
+            {% for produk in baru %}
+            <a class="col-4" href="https://wa.me/08592246928?text=Halo%20saya,%20ingin%20Memesan%20{{produk.name}}!
+            ">
+                <img src="media/{{produk.image}}" alt="#">
+                <h4>
+                    {{produk.name}}
+                </h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>
+                    {{produk.price}}
+                </p>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="footer">
+
+        <div>
+            <h3>
+                Download aplikasi kami
+            </h3>
+            <p>
+                dapatkan aplikasi di playstore.
+            </p>
+            <div class="app-logo">
+                <img src="{% static 'images/play-store.png' %}" alt="">
+                <img src="{% static 'images/app-store.png '%}" alt="">
+            </div>
+        </div>
+        <p>&copy; 2023 ahmad elektronik. Hak Cipta Dilindungi.</p>
+    </div>
+
+</body>
+
+</html>

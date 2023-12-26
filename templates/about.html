@@ -1,0 +1,67 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="name">
+            <h1>ahmad elektronik</h1>
+        </div>
+        <nav>
+            <ul id="menu-icon">
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header">
+        <div class="container">
+                    <div class="row">
+                        <div class="col-2">
+                            <h1>
+                             ahmad elektronik
+                            </h1>
+                            <p>
+                                dapatkan kualitas terbaik handphone,komputer,dan berbagai aksesoris<br>
+                                dapatkan Cash Backs! hingga 20%.
+                            </p>
+                            <p>kontak wa : 085932246928<br>
+                               alamat : jalan kabupaten nomor 12 
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'images\tech.jpg' %}" alt="Iphone">
+                        </div>
+                    </div>
+        </div>
+    </div>
+                    <div class="footer">
+                    
+                        <div>
+                            <h3>
+                                Download aplikasi kami
+                            </h3>
+                            <p>
+                                dapatkan aplikasi di playstore.
+                            </p>
+                            <div class="app-logo">
+                                <img src="{% static 'images/play-store.png' %}" alt="">
+                                <img src="{% static 'images/app-store.png '%}" alt="">
+                            </div>
+                        </div>
+                        <p>&copy; 2023 ahmad elektronik. Hak Cipta Dilindungi.</p>
+                    </div>
+</body>
+
+
+</html>
